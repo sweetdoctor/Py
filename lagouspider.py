@@ -24,10 +24,10 @@ class LagouSpider(object):
 
         username = self.driver.find_element_by_xpath('//input[@type="text"]')
         username.click()
-        username.send_keys('13643551349')
+        username.send_keys('username')
         passwd = self.driver.find_element_by_xpath('//input[@type="password"]')
         passwd.click()
-        passwd.send_keys('bendan12')
+        passwd.send_keys('yourpassword')
         self.driver.find_element_by_xpath('//input[@type="submit"]').click()
         element = WebDriverWait(self.driver, 10).until(EC.presence_of_all_elements_located((By.XPATH, '//*[@id="search_input"]')))[0]
         # input = self.driver.find_element_by_xpath('//*[@id="search_input"]')
